@@ -1,6 +1,7 @@
 version: '3.7'
 services:
   jinux:
+    container_name: jinux
     build: .
     image: ${DOCKER_USER_ID}/jinux-hw4
   production:
