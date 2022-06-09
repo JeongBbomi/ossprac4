@@ -1,14 +1,12 @@
 version: '3'
 services:
   jinux:
-    build: .
+    build: ./app
     image: ${DOCKER_USER_ID}/jinux-hw4
-    container_name: jinux
   production:
     image: ${DOCKER_USER_ID}/jinux-hw4:${BUILD_NUMBER}
     volumes:
-      - .:/code
+     / - .:/code
     command: python main.py runserver 8080:8080
     ports:
-      - "80:80"
-
+      - "8080:8080"
