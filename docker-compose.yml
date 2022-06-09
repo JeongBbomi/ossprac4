@@ -4,9 +4,9 @@ services:
     container_name: jinux
     build: .
     image: ${DOCKER_USER_ID}/jinux-hw4
-    volumes:
-      - './jenkins_home:/var/jenkins_home'
-      - '/var/run/docker.sock:/var/run/docker.sock'
+#     volumes:
+#       - './jenkins_home:/var/jenkins_home'
+#       - '/var/run/docker.sock:/var/run/docker.sock'
   production:
     image: ${DOCKER_USER_ID}/jinux-hw4
     # volumes:
