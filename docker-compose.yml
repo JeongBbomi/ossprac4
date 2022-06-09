@@ -5,7 +5,7 @@ services:
     build: .
     image: ${DOCKER_USER_ID}/jinux-hw4
   production:
-    image: ${DOCKER_USER_ID}/jinux-hw4:${2.0}
+    image: ${DOCKER_USER_ID}/jinux-hw4:2.0
     # volumes:
     #   - ./app:/code
       # - "./jenkins_home:/var/jenkins_home"
