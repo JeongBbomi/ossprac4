@@ -10,14 +10,14 @@ node {
       stage('Unit Test') {
       }
       stage('Build') {
-            sh(script: 'docker-compose build jenkins')
+            sh(script: 'docker-compose build jinux')
       }
       stage('Tag') {
             sh(script: '''docker tag ${DOCKER_USER_ID}/jinux-hw4 \
-            ${DOCKER_USER_ID}/jinux-hw4:2.0''') }
+            ${DOCKER_USER_ID}/jinux-hw4:${BUILD_NUMBER}''') }
       stage('Push') {
             sh(script: 'docker login -u ${DOCKER_USER_ID} -p ${DOCKER_USER_PASSWORD}')
-            sh(script: 'docker push ${DOCKER_USER_ID}/jinux-hw4:2.0')
+            sh(script: 'docker push ${DOCKER_USER_ID}/jinux-hw4:${BUILD_NUMBER}')
             sh(script: 'docker push ${DOCKER_USER_ID}/jinux-hw4:latest')
       }
       stage('Deploy') {
