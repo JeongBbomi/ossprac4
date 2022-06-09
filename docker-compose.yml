@@ -3,12 +3,12 @@ services:
   jinux:
     build: .
     image: ${DOCKER_USER_ID}/jinux-hw4
-#   production:
-#     image: ${DOCKER_USER_ID}/jinux-hw4:${BUILD_NUMBER}
-    volumes:
-      - ./app:/code
+  production:
+    image: ${DOCKER_USER_ID}/jinux-hw4
+    # volumes:
+    #   - ./app:/code
       # - "./jenkins_home:/var/jenkins_home"
       # - "/var/run/docker.sock:/var/run/docker.sock"
-    command: python main.py runserver 8080:8080
+    # command: python main.py runserver 8080:8080
     ports:
-      - "8080:8080"
+      - "80:80"
