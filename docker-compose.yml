@@ -1,13 +1,15 @@
 version: '3'
 services:
   jinux:
-    image: wlsxorb1/jinux-assignment4:latest
-    container_name: jinux
-    
+    image: ${DOCKER_USER_ID}/jinux-hw4:latest
+    /container_name: jinux
     build:
        context: .
-       
     restart: always
+  production:
+    image: ${DOCKER_USER_ID}/jinux-hw4:${BUILD_NUMBER}
+    volumes:
+      - .:/code
+    command: python app.py
     ports:
-      - 80:80
-
+      - "80:80"
