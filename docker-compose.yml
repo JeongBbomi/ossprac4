@@ -12,12 +12,12 @@ services:
     volumes:
       - ~/docker/jenkins/var/jenkins_home:/var/jenkins_home
 
-  #production:
+  production:
 
-   # image: ${DOCKER_USER_ID}/jinux-hw4:${BUILD_NUMBER}
+    image: ${DOCKER_USER_ID}/jinux-hw4:${BUILD_NUMBER}
 
     #command: python app.py
 
-    #ports:
+    ports:
 
-     # - "80:80"
+      - "80:80"
