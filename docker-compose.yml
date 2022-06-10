@@ -5,7 +5,7 @@ services:
 
   jinux:
     container_name: jinux
-
+    user : root
     build: .
 
     image: ${DOCKER_USER_ID}/jinux-hw4
