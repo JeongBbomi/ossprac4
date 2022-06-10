@@ -10,7 +10,7 @@ node {
       stage('Unit Test') {
       }
       stage('Build') {
-            sh(script: 'docker-compose build app')
+            sh(script: 'docker-compose build jinux')
       }
       stage('Tag') {
             sh(script: '''docker tag ${DOCKER_USER_ID}/jinux-hw4 \
