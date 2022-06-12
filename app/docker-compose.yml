@@ -11,8 +11,8 @@ services:
 
     image: ${DOCKER_USER_ID}/jinux-hw4
     volumes:
-      -v /var/run/docker.sock:/var/run/docker.sock 
-      -v /usr/bin/docker:/usr/bin/docker
+      - /var/run/docker.sock:/var/run/docker.sock 
+      - /usr/bin/docker:/usr/bin/docker
 
   production:
 
