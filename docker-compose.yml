@@ -3,8 +3,8 @@ version: '3'
 
 services:
 
-  jinux:
-    container_name: jinux
+  jinux2:
+    container_name: jinux2
     user : root
     build: .
 
@@ -16,9 +16,10 @@ services:
   production:
 
     image: ${DOCKER_USER_ID}/jinux-hw4:${BUILD_NUMBER}
+    user : root
 
     #command: python app.py
 
     ports:
 
-      - "80:80"
+      - "8181:8181"
