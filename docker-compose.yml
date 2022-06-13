@@ -8,7 +8,7 @@ services:
     user : root
     build: .
 
-    image: ${DOCKER_USER_ID}/jinux-hw4
+    image: jeongbbomi/jinux-hw4
 #    volumes:
  #     - /var/run/docker.sock:/var/run/docker.sock 
 #      - /usr/bin/docker:/usr/bin/docker
