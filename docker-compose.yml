@@ -1,24 +1,11 @@
 
-version: '3'
-
+version: "3"
 services:
-
-  jinux2:
-    container_name: jinux2
-    user : root
+  app:
+    image: ${DOCKER_USER_ID}/jinux-hw4
     build: .
-
-    image: jeongbbomi/jinux-hw4
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock 
-      - /usr/bin/docker:/usr/bin/docker
-
     ports:
-      - "80:80"
+    - "80:80"
 
-  #production:
-
-   # image: ${DOCKER_USER_ID}/jinux-hw4:${BUILD_NUMBER}
-    #user : root
-
-    #command: python app.py
+  production:
+    image: ${DOCKER_USER_ID}/jinux-hw4:${BUILD_NUMBER}
