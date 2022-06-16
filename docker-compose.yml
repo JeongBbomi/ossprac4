@@ -1,7 +1,7 @@
 
 version: "3"
 services:
-  app:
+  jinux:
     image: ${DOCKER_USER_ID}/jinux-hw4
     build: .
     ports:
